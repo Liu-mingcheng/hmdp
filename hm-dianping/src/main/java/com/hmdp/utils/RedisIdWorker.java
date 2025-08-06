@@ -35,7 +35,7 @@ public class RedisIdWorker {
 
         //2.生成序列号
         //2.1获取当前日期，精确到天
-        String date = now.format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+        String date = now.format(DateTimeFormatter.ofPattern("yyyy:MM:dd"));
         //2.2自增长 如果key不存在，自动创建key
         long count = stringRedisTemplate.opsForValue().increment("icr:"+keyPrefix+":"+date);
 
