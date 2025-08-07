@@ -26,6 +26,7 @@ class HmDianPingApplicationTests {
     @Resource
     private RedisIdWorker redisIdWorker;
 
+
     private ExecutorService es = Executors.newFixedThreadPool(500);
 
     @Test
