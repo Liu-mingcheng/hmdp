@@ -39,7 +39,7 @@ public class RedisIdWorker {
         //2.2自增长 如果key不存在，自动创建key
         long count = stringRedisTemplate.opsForValue().increment("icr:"+keyPrefix+":"+date);
 
-        //3.拼接并返回 |是或运算 有1则1
+        //3.拼接并返回  timestamp向左移动32位 |是或运算 有1则1
         return  timestamp<<COUNT_BITS | count;
     }
 }
