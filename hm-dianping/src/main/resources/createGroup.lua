@@ -1,0 +1,1 @@
+redis.call("xgroup","create","streams.order","g1",0,"MKSTREAM")
